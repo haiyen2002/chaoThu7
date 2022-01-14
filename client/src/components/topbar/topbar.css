@@ -1,0 +1,201 @@
+.top {
+    width: 100%;
+    height: 54px;
+    background-color: #262f36;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    z-index: 99;
+}
+
+.topLeft, .topRight {
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topCenter {
+    flex: 6;
+}
+
+.logo {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.topLeft .logo span {
+    color: var(--orange-color);
+}
+
+.topImg {
+    width: 42px;
+    height: 42px;
+    border: 3px solid var(--orange-color);
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.topList {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.topListItem {
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.topListItem:hover {
+    background-color: #ec733b;
+}
+
+.topListItem:hover .listItemDrop {
+    display: block;
+}
+
+.listItemDrop {
+    position: absolute;
+    top: 100%;
+    list-style: none;
+    background-color: #ec733b;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.listItemDrop li {
+    padding: 10px;
+}
+
+.listItemDrop li:hover {
+    background-color: #f5844f;
+}
+
+.listItemDrop li:first-child {
+    border-bottom: 1px solid #ec733b;
+}
+
+.topSearchIcon {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.topSearchIcon:hover {
+    color: var(--orange-color);
+}
+
+.btnCloseMenu {
+    text-align: right;
+    padding: 10px 7px 7px 0;
+    display: none;
+}
+
+.mobileTopList.none {
+    transform: translateX(-100%);
+}
+
+.mobileTopList {
+    transition: all linear .4s;
+    display: none;
+}
+
+.mobileMenuBtn {
+    display: none;
+}
+
+.mobileMenuBtn:hover {
+    color: var(--orange-color);
+}
+
+
+@media screen and (max-width: 1032px) {
+    .topLeft, .topRight {
+        flex: 1.5;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .topLeft, .topRight {
+        flex: 1;
+    }
+
+    .topLeft {
+        order: 2;
+    }
+
+    .topCenter {
+        flex: 1;
+        text-align: center;
+    }
+
+    .topRight {
+        order: 3;
+    }
+
+    .topList {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        font-size: 24px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .topListItem:hover {
+        color: var(--white-color);
+    }
+
+    .listItemDrop {
+        display: block;
+        position: relative;
+        background-color: #1a1616;
+    }
+
+    .btnCloseMenu {
+        display: block;
+    }
+
+    .mobileTopList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        flex-direction: column;
+        background-color: #181515;
+        color: #f48301;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: left;
+        transform: translateX(0);
+    }
+
+    .slogan {
+        left: 14%;
+        width: 70%;
+    }
+
+    .slogan h1 {
+        font-size: 32px;
+    }
+
+    .slogan h3 {
+        font-size: 16px;
+    }
+
+    .slogan p {
+        font-size: 14px;
+    }
+}
