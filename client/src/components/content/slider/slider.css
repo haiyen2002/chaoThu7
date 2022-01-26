@@ -1,0 +1,28 @@
+.volunteer h1 {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.react-multi-carousel-track {
+    padding-bottom: 40px;
+}
+
+.react-multi-carousel-item {
+    /* height: 215px; */
+    padding: 0 10px;
+}
+
+.sliderItem {
+    background-position: top;
+    background-size: cover;
+}
+
+.react-multiple-carousel__arrow {
+    background-color: var(--orange-color);
+}
+
+.react-multi-carousel-dot button {
+    width: 20px;
+    height: 20px;
+    border-color: var(--orange-color);
+}

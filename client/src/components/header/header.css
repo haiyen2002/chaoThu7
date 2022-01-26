@@ -1,5 +1,9 @@
+.header {
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
 .headerImg {
-    background-image: url('../../assets/imgs/nhoi-long-voi-hinh-anh-tre-em-vung-cao-trong-gia-ret-2.png');
+    /* background-image: url('/client/public/assets/post/nhoi-long-voi-hinh-anh-tre-em-vung-cao-trong-gia-ret-2.png'); */
     width: 100%;
     height: calc(100vh - 54px);
    background-size: cover;
@@ -55,6 +59,41 @@
 @-moz-keyframes blink {
     100% {
         opacity: 0;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .slogan {
+        width: 85%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .slogan h1 {
+        font-size: 30px;
+    }
+
+    .slogan h3 {
+        font-size: 18px;
+    }
+
+    .slogan p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .slogan h1 {
+        font-size: 22px;
+    }
+
+    .slogan h3 {
+        font-size: 14px;
+    }
+
+    .slogan p {
+        font-size: 12px;
     }
 }
 

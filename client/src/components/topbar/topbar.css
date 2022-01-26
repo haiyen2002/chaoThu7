@@ -4,21 +4,29 @@
     background-color: #262f36;
     position: sticky;
     top: 0;
-    display: flex;
-    align-items: center;
     color: var(--white-color);
     z-index: 99;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1230px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 54px;
+    justify-content: space-between;
+    padding: 0 40px;
 }
 
 .topLeft, .topRight {
-    flex: 3;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .topCenter {
-    flex: 6;
 }
 
 .logo {
@@ -127,6 +135,10 @@
 }
 
 @media screen and (max-width: 780px) {
+    .container {
+        padding: 0 30px;
+    }
+
     .topLeft, .topRight {
         flex: 1;
     }
@@ -135,17 +147,28 @@
         order: 2;
     }
 
+    .logo {
+        font-size: 20px;
+    }
+
     .topCenter {
         flex: 1;
-        text-align: center;
+        text-align: left;
     }
 
     .topRight {
         order: 3;
+        justify-content: flex-end;
     }
 
     .topList {
         display: none;
+    }
+
+    .topImg {
+        margin-right: 10px;
+        width: 38px;
+        height: 38px;
     }
 
     .mobileMenuBtn {
@@ -182,20 +205,4 @@
         transform: translateX(0);
     }
 
-    .slogan {
-        left: 14%;
-        width: 70%;
-    }
-
-    .slogan h1 {
-        font-size: 32px;
-    }
-
-    .slogan h3 {
-        font-size: 16px;
-    }
-
-    .slogan p {
-        font-size: 14px;
-    }
 }

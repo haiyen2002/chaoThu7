@@ -1,0 +1,14 @@
+.volunteer {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.volunteer h1 {
+    padding: 0 20px;
+}
+
+@media screen and ( max-width: 650px ) {
+
+    .volunteer h1 {
+        font-size: 26px;
+    }
+}
