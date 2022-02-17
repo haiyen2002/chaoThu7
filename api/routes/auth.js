@@ -9,7 +9,9 @@ router.get("/",(req, res)=>{
 
 //register:
 router.post("/register", async (req, res)=>{
+ 
     try {
+        console.log(12,req.body);
         //generate new Password
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(req.body.password, salt);
@@ -28,7 +30,8 @@ router.post("/register", async (req, res)=>{
         res.status(200).json(user);
 
     }catch(err){
-        res.status(500).json(error)
+        // res.status(500).json(error)
+        console.log(err);
     }
  
 })

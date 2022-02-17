@@ -8,6 +8,14 @@ Link {
   text-decoration: none;
 }
 
+ul li {
+  list-style: none;
+}
+
+ol li {
+  list-style: none;
+}
+
 img {
   display: block;
   width: 100%;

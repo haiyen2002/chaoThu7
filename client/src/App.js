@@ -19,9 +19,12 @@ import NewsList from './pages/newsList/NewsList'
 import PostDetail from './components/postDetail/PostDetail';
 import User from './pages/user/User';
 import AllUser from './pages/user/AllUser';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
 
 function App() {
-  const user = false
+  const {user} = useContext(AuthContext)
+  console.log('user',user);
   return (
     <>
       <Topbar />
@@ -61,7 +64,7 @@ function App() {
             {user? <Redirect to="/" />: <Register />} 
           </Route>
           <Route path = '/'>
-            <Home />
+           <Home />
           </Route>
         </Switch>
       </Router>

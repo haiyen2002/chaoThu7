@@ -9,6 +9,10 @@ const cors = require('cors')
 const userRouter = require('./routes/userRouter')
 const authRouter = require('./routes/auth')
 const postRouter = require('./routes/postRouter')
+const multer = require('multer')
+const path = require("path");
+const multipart = require('connect-multiparty');
+const multipartMiddleware = multipart({uploadDir:'./images'});
 
 dotenv.config();
 
@@ -25,12 +29,39 @@ mongoose
         console.log(err)
     ))
 
+app.use("/images", express.static(path.join(__dirname, "public/images")));
+
 //middleWare:
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 app.use(bodyparser.json());
 app.use(cors());
+
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+      cb(null, "public/images");
+    },
+    filename: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  });
+
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  try {
+    return res.status(200).json("File uploded successfully");
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+app.post('/uploads', multipartMiddleware, function(req, resp) {
+  console.log(req.body, req.files);
+  // don't forget to delete all req.files when done
+});
+
 app.use("/api/user", userRouter)
 app.use("/api/auth", authRouter)
 app.use("/api/post", postRouter)

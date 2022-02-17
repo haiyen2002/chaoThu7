@@ -1,0 +1,66 @@
+.share {
+    font-family: 'Varela Round', sans-serif;
+    padding: 20px 0;
+    background-color: #f4f4f4;
+    margin-bottom: 40px;
+}
+
+.shareContent {
+    max-width: 1230px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.share h3 {
+    font-size: 20px;
+    text-align: center;
+    color: var(--orange-color);
+}
+
+.shareTop input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    margin: 10px 0;
+}
+
+.shareTop p{
+    margin-bottom: 10px;
+}
+
+.shareImgContainer {
+    width: 20%;
+    margin-top: 20px;
+}
+
+.shareImgContainer img {
+    margin-bottom: 10px;
+}
+
+.shareBottom {
+    margin: 10px 0;
+}
+
+.shareOptions {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.shareOptionText span {
+    margin-left: 8px;
+}
+
+.shareBottom button {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.shareBottom button:hover {
+    background-color: #d45617;
+    border: 1px solid #d45617;
+    color: var(--white-color);
+}

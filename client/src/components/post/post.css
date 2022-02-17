@@ -1,0 +1,60 @@
+.post button {
+    background-color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    color: var(--white-color);
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.post button:hover {
+    background-color: #d45617;
+    border: 1px solid #d45617;
+    color: var(--white-color);
+}
+
+.popularNews .post {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularNews .post .boxImage {
+    width: 58%;
+    height: 350px;
+}
+
+.popularNews .post .boxImage img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.popularNews .post .boxText {
+    width: 38%;
+}
+
+.popularNews .post .boxText h2 {
+    margin-bottom: 20px;
+}
+
+.popularNews .post .boxText p {
+    margin-bottom: 10px;
+}
+
+.description {
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.likeBtn {
+    padding: 4px 12px;
+    margin-right: 5px;
+}
+
+.author {
+    margin-top: 10px;
+}

@@ -47,6 +47,20 @@
     margin-right: 20px;
 }
 
+.btnLogin {
+    border: 1px solid var(--orange-color);
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    background-color: var(--orange-color);
+}
+
+.btnLogin:hover {
+    color: var(--white-color);
+   
+}
+
 .topList {
     display: flex;
     justify-content: center;

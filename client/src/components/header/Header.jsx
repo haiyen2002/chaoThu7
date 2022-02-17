@@ -16,7 +16,7 @@ export default function Header() {
     },[])
     return (
        <div className="header">
-                <div style={{backgroundImage:"url('/assets/post/nhoi-long-voi-hinh-anh-tre-em-vung-cao-trong-gia-ret-2.png')"}} className="headerImg">
+                <div style={{backgroundImage:"url('images/nhoi-long-voi-hinh-anh-tre-em-vung-cao-trong-gia-ret-2.png')"}} className="headerImg">
                     <div className="slogan">
                             <h1 ref={textRef}></h1>
                             <h3>Để Trở Thành Một Phần Thay Đổi Thế Giới </h3>

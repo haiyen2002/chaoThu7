@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom';
 import { publicRequest } from '../../requestMethod';
 import { useParams } from 'react-router-dom';
+import Footer from '../footer/Footer';
+import './postDetail.css'
 
 export default function PostDetail() {
     const params = useParams()
@@ -22,12 +24,15 @@ export default function PostDetail() {
       },[id])
 
     return (
-        <div>
+        <div className='postDetailWrapper'>
+          <div  className='postDetail'>
             <div key={post._id}>
-              <h2>{post.title}</h2>
-              <p>{post.desc}</p>
-              <p>{post.likes && post.likes.length}</p>
+                <h2 className='title'>{post.title}</h2>
+                <p dangerouslySetInnerHTML={{__html:post.desc}}></p>
+                {/* <p>{post.likes && post.likes.length}</p> */}
+              </div>
             </div>
+          <Footer />
         </div>
   )
 }

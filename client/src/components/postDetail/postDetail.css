@@ -1,0 +1,24 @@
+.postDetailWrapper {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.postDetail {
+    max-width: 1230px;
+    width: 90%;
+    margin: 40px auto;
+    margin-bottom: 70px;
+}
+
+.postDetail .title {
+    color: var(--orange-color);
+}
+
+.postDetail h2 {
+    text-align: center;
+    margin: 20px 0;
+  
+}
+
+.postDetail img {
+    margin: 10px 0;
+}
